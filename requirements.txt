@@ -2,4 +2,4 @@ flask
 pymysql
 MySQL
 flask_mysqldb
-mysql
+mysql.connector
