@@ -2,3 +2,4 @@ flask
 pymysql
 MySQL
 flask_mysqldb
+mysql
