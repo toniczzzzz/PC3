@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro e inicio de sesión</title>
+</head>
+<body>
+
+
+  <h2>Iniciar sesión</h2>
+  <form action="/login" method="POST">
+      <label for="username">Usuario:</label>
+      <input type="username" id="username" name="username" required><br><br>
+      <label for="clave">Contraseña:</label>
+      <input type="clave" id="clave" name="clave" required><br><br>
+      <input type="submit" value="Iniciar sesión">
+  </form>
+  
+    <h2>Registro</h2>
+    <form action="/register" method="POST">
+        <label for="username">Usuario:</label>
+        <input type="username" id="username" name="username" required><br><br>
+        <label for="nombre">Nombre:</label>
+        <input type="nombre" id="nombre" name="nombre" required><br><br>
+        <label for="apellido">Apellido:</label>
+        <input type="apellido" id="apellido" name="apellido" required><br><br>
+        <label for="clave">Contraseña:</label>
+        <input type="clave" id="clave" name="clave" required><br><br>
+        <input type="submit" value="Registrarse">
+    </form>
+
+
+</body>
+</html>
