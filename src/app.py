@@ -1,14 +1,13 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request
 import mysql.connector
 
 app = Flask(__name__)
 
-# Configuración de la conexión a la base de datos
 db_config = {
     'host': 'aws.connect.psdb.cloud',
-    'user': 'mxdqtfzvvt7wb1rmvf9t',
-    'password': 'pscale_pw_82gJjDeLPmk25iWoOz4PXEUuDDGJR7mZnT0hauyf3o1',
-    'database': 'pc3',
+    'user': 'uodwkk77mxqgaanfxmin',
+    'password': 'pscale_pw_l5VqgtkQA6Wt99D1Sx8s4bhQygyUA7whGw0XDZ8B1Fc',
+    'database': 'pc3'
 }
 
 @app.route('/')
@@ -22,17 +21,17 @@ def register():
     apellido = request.form['apellido']
     password = request.form['clave']
 
-    # Conexión a la base de datos
+
     conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor()
 
-    # Insertar datos en la base de datos
+
     query = "INSERT INTO alumnos (username,nombre,apellido,clave) VALUES (%s, %s, %s, %s)"
     values = (username, nombre, apellido, password)
     cursor.execute(query, values)
     conn.commit()
 
-    # Cerrar la conexión a la base de datos
+
     cursor.close()
     conn.close()
 
@@ -44,17 +43,17 @@ def login():
     username = request.form['username']
     password = request.form['clave']
 
-    # Conexión a la base de datos
+
     conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor()
 
-    # Verificar las credenciales del usuario
+
     query = "SELECT * FROM alumnos WHERE username = %s AND clave = %s"
     values = (username, password)
     cursor.execute(query, values)
     result = cursor.fetchone()
 
-    # Cerrar la conexión a la base de datos
+
     cursor.close()
     conn.close()
 
