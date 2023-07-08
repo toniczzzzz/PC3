@@ -6,8 +6,8 @@ app = Flask(__name__)
 # Configuración de la conexión a la base de datos
 db_config = {
     'host': 'aws.connect.psdb.cloud',
-    'user': '7j08m2vctoqq6hybde51',
-    'password': 'pscale_pw_WaxojMygJ2v4MmTiueCM2KOsA33Y4DGn9BLLVIGy3jU',
+    'user': 'mxdqtfzvvt7wb1rmvf9t',
+    'password': 'pscale_pw_82gJjDeLPmk25iWoOz4PXEUuDDGJR7mZnT0hauyf3o1',
     'database': 'pc3',
 }
 
